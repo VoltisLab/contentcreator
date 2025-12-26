@@ -1,39 +1,59 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  // Wedding images from Pexels
+  const weddingImages = [
+    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+    'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+  ]
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        setIsVideoLoaded(true)
-      })
-    }
-  }, [])
+    setIsLoaded(true)
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % weddingImages.length)
+    }, 5000) // Change slide every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [weddingImages.length])
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
+      {/* Image Slider Background */}
       <div className="absolute inset-0 z-0">
-        {/* Using Pexels event image as background */}
-        <img
-          src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Event background"
-          className="absolute inset-0 w-full h-full object-cover"
-          onLoad={() => setIsVideoLoaded(true)}
-        />
-        {!isVideoLoaded && (
+        {weddingImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Wedding event ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover"
+              onLoad={() => index === 0 && setIsLoaded(true)}
+            />
+          </div>
+        ))}
+        {!isLoaded && (
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50"></div>
         )}
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+        {/* White overlay */}
+        <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
       </div>
 
+      {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-6 animate-fade-in">
-            <span className="inline-block px-4 py-2 bg-white/80 backdrop-blur-md text-gray-800 text-sm font-medium rounded-full border border-white/50 shadow-sm">
+            <span className="inline-block px-4 py-2 bg-white/90 backdrop-blur-md text-gray-800 text-sm font-medium rounded-full border border-white/50 shadow-sm">
               Professional Event Content, Minus the Stress
             </span>
           </div>
@@ -46,11 +66,15 @@ export default function Hero() {
             Professional Event Photos. Shot on iPhone.
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up bg-white/60 backdrop-blur-md px-6 py-4 rounded-lg" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto mb-6 leading-relaxed animate-slide-up bg-white/80 backdrop-blur-md px-6 py-4 rounded-lg" style={{ animationDelay: '0.2s' }}>
+            People want photos for their phones to see what happened at the event. Traditional cameras aren't cut out for that — the resolution is all wrong, and users get portrait mostly on mobile. We capture in the formats people actually use.
+          </p>
+
+          <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up bg-white/70 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ animationDelay: '0.25s' }}>
             We attend your event and capture high-quality photos and videos using iPhones — fast, discreet, and social-ready. No bulky cameras. No intimidating photographers. Just authentic moments, delivered same night.
           </p>
           
-          <div className="text-xl sm:text-2xl font-semibold text-gray-800 mb-12 animate-slide-up bg-white/50 backdrop-blur-sm px-6 py-3 rounded-lg inline-block" style={{ animationDelay: '0.3s' }}>
+          <div className="text-xl sm:text-2xl font-semibold text-gray-800 mb-12 animate-slide-up bg-white/60 backdrop-blur-sm px-6 py-3 rounded-lg inline-block" style={{ animationDelay: '0.3s' }}>
             Capture the moment. No cameras. No hassle.
           </div>
           
@@ -69,6 +93,22 @@ export default function Hero() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
+        {weddingImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-2 rounded-full transition-all ${
+              index === currentSlide
+                ? 'w-8 bg-white/90'
+                : 'w-2 bg-white/50 hover:bg-white/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">

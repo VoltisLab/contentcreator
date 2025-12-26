@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: 'Professional event photos and videos captured on iPhone. Fast, discreet, and social-ready. No bulky cameras. Same-night delivery. Perfect for birthdays, weddings, corporate events, and more.',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: {

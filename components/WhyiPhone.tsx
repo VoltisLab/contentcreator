@@ -16,8 +16,8 @@ export default function WhyiPhone() {
       icon: '⚡',
     },
     {
-      title: 'Social-First',
-      description: 'Perfect for Instagram, TikTok, LinkedIn. Vertical, horizontal, and square formats ready to post.',
+      title: 'Mobile-Optimized',
+      description: 'People want photos for their phones. Traditional cameras shoot landscape — wrong resolution, wrong format. We capture portrait-first content that looks perfect on mobile screens.',
       icon: '📱',
     },
     {
@@ -42,6 +42,9 @@ export default function WhyiPhone() {
           <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             iPhone cameras are now industry-level. Combined with trained creators, you get professional event content without the traditional photographer overhead.
+          </p>
+          <p className="text-base text-gray-700 max-w-3xl mx-auto mt-4 bg-white/80 backdrop-blur-sm px-6 py-4 rounded-lg border border-gray-200/50 font-medium">
+            <strong>Why cameras don't work for mobile:</strong> People want to see what happened at the event on their phones. Traditional cameras shoot in landscape format with resolutions that don't match mobile screens. Most users view content in portrait mode, but cameras aren't designed for that. We capture in the formats people actually use — portrait-first, mobile-optimized, ready to view and share instantly.
           </p>
           <p className="text-base text-gray-600 max-w-3xl mx-auto mt-4 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200/50">
             <strong>For bigger jobs:</strong> We also have professional camera equipment including Canon G7X cameras, tripods, lighting rigs, and all the equipment a professional camera operator would use. Perfect for larger events, corporate productions, or when you need that extra level of polish.
@@ -93,6 +96,11 @@ export default function WhyiPhone() {
                   <td className="py-4 px-4 font-medium">Cost</td>
                   <td className="py-4 px-4 text-center text-gray-600">Higher rates</td>
                   <td className="py-4 px-4 text-center text-gray-600">Lower cost</td>
+                </tr>
+                <tr>
+                  <td className="py-4 px-4 font-medium">Mobile Format</td>
+                  <td className="py-4 px-4 text-center text-gray-600">Landscape, wrong resolution</td>
+                  <td className="py-4 px-4 text-center text-gray-600">Portrait-first, mobile-optimized</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-4 font-medium">Social Ready</td>

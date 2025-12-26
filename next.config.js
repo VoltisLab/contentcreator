@@ -10,6 +10,23 @@ const nextConfig = {
       },
     ],
   },
+  // Force browser to reload CSS and JS
+  generateEtags: false,
+  poweredByHeader: false,
+  // Ensure proper caching
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
