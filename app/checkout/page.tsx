@@ -18,6 +18,7 @@ function CheckoutForm() {
     additionalNotes: '',
     btsPhotographer: false,
     professionalEquipment: false,
+    additionalContentCreator: false,
   })
 
   const packages = {
@@ -71,10 +72,32 @@ function CheckoutForm() {
 
   const selectedPackage = packages[packageName as keyof typeof packages] || packages.Standard
 
+  // Calculate pricing
+  const getBasePrice = () => {
+    if (selectedPackage.price === '£189') return 189
+    if (selectedPackage.price === '£299') return 299
+    if (selectedPackage.price === '£499') return 499
+    return 299
+  }
+
+  const basePrice = getBasePrice()
+  const additionalCreatorPrice = formData.additionalContentCreator ? 299 : 0
+  const professionalEquipmentPrice = formData.professionalEquipment ? 199 : 0
+  const subtotal = basePrice + additionalCreatorPrice + professionalEquipmentPrice
+  const vat = subtotal * 0.2
+  const total = subtotal + vat
+
+  const formatPrice = (price: number) => `£${price.toFixed(2)}`
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Here you would typically send the data to your backend
-    alert(`Thank you for your booking! We'll contact you soon to confirm your ${selectedPackage.name} package.`)
+    const addOns = []
+    if (formData.additionalContentCreator) addOns.push('Additional Content Creator')
+    if (formData.professionalEquipment) addOns.push('Professional Equipment')
+    if (formData.btsPhotographer) addOns.push('BTS Photographer')
+    
+    alert(`Thank you for your booking! We'll contact you soon to confirm your ${selectedPackage.name} package${addOns.length > 0 ? ' with ' + addOns.join(', ') : ''}.`)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -134,22 +157,32 @@ function CheckoutForm() {
 
                   <div className="space-y-2 mb-6">
                     <div className="flex justify-between text-sm">
-                      <span className="text-gray-600">Subtotal</span>
+                      <span className="text-gray-600">Package</span>
                       <span className="text-gray-900 font-semibold">{selectedPackage.price}</span>
+                    </div>
+                    {formData.additionalContentCreator && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-600">Additional Content Creator</span>
+                        <span className="text-gray-900 font-semibold">+£299.00</span>
+                      </div>
+                    )}
+                    {formData.professionalEquipment && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-600">Professional Equipment</span>
+                        <span className="text-gray-900 font-semibold">+£199.00</span>
+                      </div>
+                    )}
+                    <div className="flex justify-between text-sm pt-2 border-t border-gray-200">
+                      <span className="text-gray-600">Subtotal</span>
+                      <span className="text-gray-900 font-semibold">{formatPrice(subtotal)}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-600">VAT (20%)</span>
-                      <span className="text-gray-900 font-semibold">
-                        {selectedPackage.price === '£189' ? '£37.80' : 
-                         selectedPackage.price === '£299' ? '£59.80' : '£99.80'}
-                      </span>
+                      <span className="text-gray-900 font-semibold">{formatPrice(vat)}</span>
                     </div>
-                    <div className="pt-2 border-t border-gray-200 flex justify-between">
+                    <div className="pt-2 border-t-2 border-gray-300 flex justify-between">
                       <span className="font-bold text-gray-900">Total</span>
-                      <span className="font-bold text-gray-900 text-xl">
-                        {selectedPackage.price === '£189' ? '£226.80' : 
-                         selectedPackage.price === '£299' ? '£358.80' : '£598.80'}
-                      </span>
+                      <span className="font-bold text-gray-900 text-xl">{formatPrice(total)}</span>
                     </div>
                   </div>
 
@@ -283,6 +316,24 @@ function CheckoutForm() {
                       <label htmlFor="btsPhotographer" className="text-sm text-gray-700">
                         I would like the content creator to work as a BTS (Behind-The-Scenes) photographer
                       </label>
+                    </div>
+                    <div className="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <input
+                        type="checkbox"
+                        id="additionalContentCreator"
+                        name="additionalContentCreator"
+                        checked={formData.additionalContentCreator}
+                        onChange={handleChange}
+                        className="mt-1 mr-3 w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+                      />
+                      <div>
+                        <label htmlFor="additionalContentCreator" className="text-sm font-semibold text-gray-900 block mb-1">
+                          Additional Content Creator (+£299)
+                        </label>
+                        <p className="text-xs text-gray-600">
+                          Add a second trained content creator for double coverage. Perfect for larger events, multiple locations, or when you need more comprehensive coverage.
+                        </p>
+                      </div>
                     </div>
                     <div className="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-200">
                       <input
