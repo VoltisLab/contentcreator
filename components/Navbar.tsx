@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 function Logo() {
   const [hasError, setHasError] = useState(false)
@@ -27,6 +28,7 @@ function Logo() {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
 
   const menuItems = [
     { name: 'How It Works', href: '#how-it-works' },
@@ -35,13 +37,26 @@ export default function Navbar() {
     { name: 'FAQ', href: '#faq' },
   ]
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (window.location.pathname === '/') {
+      window.location.reload()
+    } else {
+      router.push('/')
+    }
+  }
+
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16">
-          <Link href="/" className="flex-shrink-0 flex items-center no-underline hover:no-underline">
+          <a 
+            href="/" 
+            onClick={handleLogoClick}
+            className="flex-shrink-0 flex items-center no-underline hover:no-underline cursor-pointer"
+          >
             <Logo />
-          </Link>
+          </a>
 
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (

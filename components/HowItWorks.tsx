@@ -27,7 +27,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section id="how-it-works" className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="bg-white pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">

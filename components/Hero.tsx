@@ -112,7 +112,7 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-gray-50">
       {/* Image Slider Background */}
-      <div className="relative h-[70vh] sm:h-screen w-full">
+      <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
         <div className="absolute inset-0 z-0">
           {eventImages.map((image, index) => (
             <div
@@ -139,78 +139,80 @@ export default function Hero() {
           <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
         </div>
 
-        {/* Content Over Slider */}
-        <div className="absolute inset-0 z-40 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        {/* Title Over Slider */}
+        <div className="absolute inset-0 z-40 flex items-center justify-center px-3 sm:px-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12 lg:py-16">
           <div className="max-w-7xl mx-auto w-full text-center">
-            <div className="mb-4 sm:mb-6 animate-fade-in">
-              <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-white/90 backdrop-blur-md text-gray-800 text-xs sm:text-sm font-medium rounded-full border border-white/50 shadow-sm">
+            <div className="mb-3 sm:mb-4 md:mb-6 animate-fade-in">
+              <span className="inline-block px-2.5 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/90 backdrop-blur-md text-gray-800 text-xs sm:text-sm font-medium rounded-full border border-white/50 shadow-sm">
                 Professional Event Content, Minus the Stress
               </span>
             </div>
             
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-slide-up text-gray-900 drop-shadow-lg px-2">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight animate-slide-up text-gray-900 drop-shadow-lg px-1">
               Event Content, Made Simple.
             </h1>
             
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-8 leading-tight animate-slide-up text-gray-800 drop-shadow-lg px-2" style={{ animationDelay: '0.1s' }}>
+            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-8 leading-tight animate-slide-up text-gray-800 drop-shadow-lg px-1" style={{ animationDelay: '0.1s' }}>
               Professional Event Photos. Shot on iPhone.
             </h2>
-            
-            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-4xl mx-auto mb-4 sm:mb-6 leading-relaxed animate-slide-up bg-white/90 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-4 rounded-lg shadow-lg" style={{ animationDelay: '0.2s' }}>
-              At Moments Made, we believe the best content is captured, not directed. Events are about connection, atmosphere, and energy - not stopping people mid-moment to pose. By working with iPhones, we stay present without being intrusive, allowing moments to unfold naturally while still being beautifully documented.
-            </p>
-
-            <p className="text-xs sm:text-sm md:text-base text-gray-700 max-w-4xl mx-auto mb-4 sm:mb-6 leading-relaxed animate-slide-up bg-white/85 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md" style={{ animationDelay: '0.25s' }}>
-              We believe great event content should be immediate. Waiting weeks for photos no longer fits the way events live online today. That's why our approach prioritises speed, simplicity, and quality - delivering content while the moment is still relevant.
-            </p>
-
-            <p className="text-xs sm:text-sm md:text-base text-gray-700 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed animate-slide-up bg-white/90 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-4 rounded-lg border border-gray-200/50 shadow-lg" style={{ animationDelay: '0.3s' }}>
-              <strong>We're professionals at creating a story for your event.</strong> We capture those little silly moments by the event host, guests, kids, and everyone in between. It's these authentic, unscripted moments that make your event memorable - the laughter, the spontaneous dances, the candid expressions. We document it all to tell the complete story of your event.
-            </p>
 
             {/* CTA Buttons on Slider */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up mt-4 sm:mt-6" style={{ animationDelay: '0.2s' }}>
               <a
-                href="#book"
-                className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white/60 backdrop-blur-md text-gray-900 border-2 border-white/80 font-semibold rounded-md hover:bg-white/70 transition-all transform hover:scale-105 shadow-lg text-base sm:text-lg text-center"
+                href="#packages"
+                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-white/60 backdrop-blur-md text-gray-900 border-2 border-white/80 font-semibold rounded-md hover:bg-white/70 transition-all transform hover:scale-105 shadow-lg text-sm sm:text-base md:text-lg text-center whitespace-nowrap w-auto"
               >
                 Book Now
               </a>
               <a
                 href="#how-it-works"
-                className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white/40 backdrop-blur-md text-gray-900 border-2 border-white/60 font-semibold rounded-md hover:bg-white/50 transition-all transform hover:scale-105 text-base sm:text-lg text-center"
+                className="inline-block px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-white/40 backdrop-blur-md text-gray-900 border-2 border-white/60 font-semibold rounded-md hover:bg-white/50 transition-all transform hover:scale-105 text-sm sm:text-base md:text-lg text-center whitespace-nowrap w-auto"
               >
                 See How It Works
               </a>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-16 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-50 flex gap-2">
-          {eventImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all ${
-                index === currentSlide
-                  ? 'w-8 bg-white/90'
-                  : 'w-2 bg-white/50 hover:bg-white/70'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+      {/* Content Below Slider */}
+      <div className="relative bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Paragraphs */}
+          <div className="text-center mb-6 sm:mb-8 md:mb-10">
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-4xl mx-auto mb-4 sm:mb-5 md:mb-6 leading-relaxed animate-slide-up">
+              At Moments Made, we believe the best content is captured, not directed. Events are about connection, atmosphere, and energy - not stopping people mid-moment to pose. By working with iPhones, we stay present without being intrusive, allowing moments to unfold naturally while still being beautifully documented.
+            </p>
 
-        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-50 animate-bounce hidden sm:block">
-          <svg className="w-5 h-5 sm:w-6 sm:h-6 text-gray-900" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-4xl mx-auto mb-4 sm:mb-5 md:mb-6 leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
+              We believe great event content should be immediate. Waiting weeks for photos no longer fits the way events live online today. That's why our approach prioritises speed, simplicity, and quality - delivering content while the moment is still relevant.
+            </p>
+
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-4xl mx-auto mb-6 sm:mb-8 md:mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <strong>We're professionals at creating a story for your event.</strong> We capture those little silly moments by the event host, guests, kids, and everyone in between. It's these authentic, unscripted moments that make your event memorable - the laughter, the spontaneous dances, the candid expressions. We document it all to tell the complete story of your event.
+            </p>
+          </div>
+
+          {/* Slide Indicators - Outside the slider */}
+          <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+            {eventImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentSlide
+                    ? 'w-8 bg-gray-900'
+                    : 'w-2 bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Video Slider - Below Slider */}
-      <div className="relative bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-white pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
