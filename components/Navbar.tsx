@@ -8,11 +8,11 @@ function Logo() {
   const [hasError, setHasError] = useState(false)
 
   if (hasError) {
-    return <span className="text-2xl font-bold text-black">MomentsMade</span>
+    return <span className="text-xl font-bold text-black whitespace-nowrap">MomentsMade</span>
   }
 
   return (
-    <div className="relative w-32 h-10">
+    <div className="relative w-40 h-10">
       <Image
         src="/logo.svg"
         alt="MomentsMade"
@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex-shrink-0 flex items-center">
+          <Link href="/" className="flex-shrink-0 flex items-center no-underline hover:no-underline">
             <Logo />
           </Link>
 
