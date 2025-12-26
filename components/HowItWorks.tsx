@@ -15,7 +15,7 @@ export default function HowItWorks() {
     {
       number: '3',
       title: 'We Capture Everything',
-      description: 'Photos, videos, behind-the-scenes moments — all captured naturally. Guests feel comfortable, not staged.',
+      description: 'Photos, videos, behind-the-scenes moments - all captured naturally. Guests feel comfortable, not staged.',
       icon: '📸',
     },
     {
