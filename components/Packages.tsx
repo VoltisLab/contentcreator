@@ -1,3 +1,7 @@
+'use client'
+
+import Link from 'next/link'
+
 export default function Packages() {
   const packages = [
     {
@@ -103,8 +107,8 @@ export default function Packages() {
                 ))}
               </ul>
 
-              <a
-                href="#book"
+              <Link
+                href={`/checkout?package=${pkg.name}`}
                 className={`block w-full text-center px-6 py-3 rounded-md font-semibold transition-all ${
                   pkg.popular
                     ? 'bg-gray-900 text-white hover:bg-gray-800'
@@ -112,7 +116,7 @@ export default function Packages() {
                 }`}
               >
                 Book Now
-              </a>
+              </Link>
             </div>
           ))}
         </div>
