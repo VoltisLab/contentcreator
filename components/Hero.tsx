@@ -68,11 +68,11 @@ export default function Hero() {
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto mb-6 leading-relaxed animate-slide-up bg-white/80 backdrop-blur-md px-6 py-4 rounded-lg" style={{ animationDelay: '0.2s' }}>
-            People want photos for their phones to see what happened at the event. Traditional cameras aren't cut out for that - the resolution is all wrong, and users get portrait mostly on mobile. We capture in the formats people actually use.
+            At Moments Made, we believe the best content is captured, not directed. Events are about connection, atmosphere, and energy - not stopping people mid-moment to pose. By working with iPhones, we stay present without being intrusive, allowing moments to unfold naturally while still being beautifully documented.
           </p>
 
           <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up bg-white/70 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ animationDelay: '0.25s' }}>
-            We attend your event and capture high-quality photos and videos using iPhones - fast, discreet, and social-ready. No bulky cameras. No intimidating photographers. Just authentic moments, delivered same night.
+            We believe great event content should be immediate. Waiting weeks for photos no longer fits the way events live online today. That's why our approach prioritises speed, simplicity, and quality - delivering content while the moment is still relevant.
           </p>
           
           <div className="text-xl sm:text-2xl font-semibold text-gray-800 mb-12 animate-slide-up bg-white/60 backdrop-blur-sm px-6 py-3 rounded-lg inline-block" style={{ animationDelay: '0.3s' }}>
