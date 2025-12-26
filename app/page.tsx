@@ -17,7 +17,6 @@ export default function Home() {
       <WhyiPhone />
       <EventTypes />
       <Portfolio />
-      <Packages />
       <AddOns />
       <Testimonials />
       <FAQ />
