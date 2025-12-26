@@ -15,7 +15,7 @@ export default function HowItWorks() {
     {
       number: '3',
       title: 'We Capture Everything',
-      description: 'Photos, videos, behind-the-scenes moments - all captured naturally. Guests feel comfortable, not staged.',
+      description: 'Photos, videos, behind-the-scenes moments - all captured naturally. We document the big moments and those little silly moments by hosts, guests, and kids too. We\'re professionals at creating a story for your event.',
       icon: '📸',
     },
     {

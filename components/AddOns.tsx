@@ -51,6 +51,12 @@ export default function AddOns() {
       price: '+£79',
       icon: '🏷️',
     },
+    {
+      title: 'Image Effects & Filters',
+      description: 'Add creative effects, filters, and enhancements to your images. Perfect for highlighting those silly moments and creating a unique visual style',
+      price: '+£89',
+      icon: '✨',
+    },
   ]
 
   const premium = [

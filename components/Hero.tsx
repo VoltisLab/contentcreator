@@ -66,8 +66,12 @@ export default function Hero() {
               At Moments Made, we believe the best content is captured, not directed. Events are about connection, atmosphere, and energy - not stopping people mid-moment to pose. By working with iPhones, we stay present without being intrusive, allowing moments to unfold naturally while still being beautifully documented.
             </p>
 
-            <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up bg-white/70 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ animationDelay: '0.25s' }}>
+            <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-6 leading-relaxed animate-slide-up bg-white/70 backdrop-blur-sm px-6 py-3 rounded-lg" style={{ animationDelay: '0.25s' }}>
               We believe great event content should be immediate. Waiting weeks for photos no longer fits the way events live online today. That's why our approach prioritises speed, simplicity, and quality - delivering content while the moment is still relevant.
+            </p>
+
+            <p className="text-base sm:text-lg text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up bg-white/80 backdrop-blur-md px-6 py-4 rounded-lg border border-gray-200/50" style={{ animationDelay: '0.3s' }}>
+              <strong>We're professionals at creating a story for your event.</strong> We capture those little silly moments by the event host, guests, kids, and everyone in between. It's these authentic, unscripted moments that make your event memorable - the laughter, the spontaneous dances, the candid expressions. We document it all to tell the complete story of your event.
             </p>
           </div>
 
