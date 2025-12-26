@@ -1,25 +1,25 @@
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
-import Clients from '@/components/Clients'
+import HowItWorks from '@/components/HowItWorks'
+import WhyiPhone from '@/components/WhyiPhone'
+import EventTypes from '@/components/EventTypes'
+import Packages from '@/components/Packages'
+import AddOns from '@/components/AddOns'
 import Testimonials from '@/components/Testimonials'
-import CaseStudies from '@/components/CaseStudies'
-import LatestNews from '@/components/LatestNews'
 import FAQ from '@/components/FAQ'
-import CTA from '@/components/CTA'
+import Booking from '@/components/Booking'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Services />
-      <Clients />
+      <HowItWorks />
+      <WhyiPhone />
+      <EventTypes />
+      <Packages />
+      <AddOns />
       <Testimonials />
-      <CaseStudies />
-      <LatestNews />
       <FAQ />
-      <CTA />
+      <Booking />
     </main>
   )
 }
-
-

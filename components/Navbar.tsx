@@ -8,14 +8,14 @@ function Logo() {
   const [hasError, setHasError] = useState(false)
 
   if (hasError) {
-    return <span className="text-2xl font-bold text-black">One Day Agency</span>
+    return <span className="text-2xl font-bold text-black">Content Creator</span>
   }
 
   return (
     <div className="relative w-32 h-10">
       <Image
         src="/logo.svg"
-        alt="One Day Agency"
+        alt="Content Creator"
         fill
         className="object-contain"
         priority
@@ -27,33 +27,13 @@ function Logo() {
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState<string | null>(null)
 
   const menuItems = [
+    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Packages', href: '#packages' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'About', href: '/about' },
-    { 
-      name: 'Work', 
-      href: '/work',
-      submenu: [
-        { name: 'Creative', href: '/work/creative' },
-        { name: 'Digital', href: '/work/digital' },
-        { name: 'OOH', href: '/work/ooh' },
-        { name: 'TV & VOD', href: '/work/tv-vod' },
-        { name: 'Radio', href: '/work/radio' },
-        { name: 'International', href: '/work/international' },
-        { name: 'Ad Tech', href: '/work/ad-tech' },
-      ]
-    },
-    { name: 'Explore', href: '/explore' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact Us', href: '/contact' },
-  ]
-
-  const locations = [
-    { flag: '🇬🇧', name: 'UK' },
-    { flag: '🇵🇱', name: 'Warsaw' },
-    { flag: '🇫🇷', name: 'Paris' },
-    { flag: '🇩🇪', name: 'Berlin' },
+    { name: 'Contact', href: '#book' },
   ]
 
   return (
@@ -66,43 +46,21 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  className="text-gray-700 hover:text-black transition-colors relative group/item"
-                  onMouseEnter={() => item.submenu && setIsSubMenuOpen(item.name)}
-                  onMouseLeave={() => setIsSubMenuOpen(null)}
-                >
-                  {item.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-orange transition-all group-hover/item:w-full"></span>
-                </Link>
-                {item.submenu && isSubMenuOpen === item.name && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg py-2 animate-fade-in">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent-orange/10 hover:text-accent-orange transition-colors"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-black transition-colors relative group/item"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-orange transition-all group-hover/item:w-full"></span>
+              </Link>
             ))}
-            
-            <div className="flex items-center space-x-2">
-              {locations.map((loc) => (
-                <button
-                  key={loc.name}
-                  className="text-lg hover:opacity-70 transition-opacity"
-                  title={loc.name}
-                >
-                  {loc.flag}
-                </button>
-              ))}
-            </div>
+            <a
+              href="#book"
+              className="inline-block px-6 py-2 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all"
+            >
+              Book Now
+            </a>
           </div>
 
           <button
@@ -133,42 +91,25 @@ export default function Navbar() {
         <div className="md:hidden border-t border-gray-200 bg-white">
           <div className="px-4 py-4 space-y-4">
             {menuItems.map((item) => (
-              <div key={item.name}>
-                <Link
-                  href={item.href}
-                  className="block text-gray-700 hover:text-black font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.submenu && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block text-sm text-gray-600 hover:text-black"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block text-gray-700 hover:text-black font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
             ))}
-            <div className="flex items-center space-x-4 pt-4 border-t border-gray-200">
-              {locations.map((loc) => (
-                <button key={loc.name} className="text-lg">
-                  {loc.flag}
-                </button>
-              ))}
-            </div>
+            <a
+              href="#book"
+              className="block w-full text-center px-6 py-2 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Book Now
+            </a>
           </div>
         </div>
       )}
     </nav>
   )
 }
-
-

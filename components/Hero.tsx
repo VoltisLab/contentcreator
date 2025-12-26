@@ -31,51 +31,47 @@ export default function Hero() {
           <source src="/hero-video.webm" type="video/webm" />
         </video>
         {!isVideoLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-800 to-orange-900"></div>
         )}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center text-white">
           <div className="mb-6 animate-fade-in">
             <span className="inline-block px-4 py-2 bg-accent-orange/90 text-white text-sm font-medium rounded-full backdrop-blur-sm">
-              The Drum Recommended Agency and Top 50 Integrated Agency
+              Professional Event Content, Minus the Stress
             </span>
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-slide-up">
-            Integrated Marketing Agency:
+            Event Content, Made Simple.
           </h1>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Creative, Media, Digital Marketing and Advertising in Manchester, London, Warsaw, Paris and Berlin.
+            Professional Event Photos. Shot on iPhone.
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            As an integrated marketing and advertising agency, we add value to brands by bridging the gap between creative, digital and media. Free from knowledge silos, we offer fully integrated, unique perspectives across all moving parts to deliver well-thought-out, high-performing campaigns.
+            We attend your event and capture high-quality photos and videos using iPhones — fast, discreet, and social-ready. No bulky cameras. No intimidating photographers. Just authentic moments, delivered same night.
           </p>
           
-          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            Headquartered in the thriving, up-and-coming city of Manchester, we also maintain a presence in London, Warsaw, Paris and Berlin, delivering campaigns across major markets for brands of all sizes.
-          </p>
-          
-          <div className="text-xl sm:text-2xl font-semibold text-accent-yellow mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            Creative, Digital, Out-of-Home, TV, Radio, Outdoor and more.
+          <div className="text-xl sm:text-2xl font-semibold text-accent-yellow mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            Capture the moment. No cameras. No hassle.
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.5s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <a
-              href="/about"
-              className="inline-block px-8 py-4 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all transform hover:scale-105 shadow-lg"
+              href="#book"
+              className="inline-block px-8 py-4 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all transform hover:scale-105 shadow-lg text-lg"
             >
-              About
+              Book a Creator
             </a>
             <a
-              href="/work"
-              className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white font-semibold rounded-md hover:bg-white hover:text-black transition-all transform hover:scale-105"
+              href="#how-it-works"
+              className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white font-semibold rounded-md hover:bg-white hover:text-black transition-all transform hover:scale-105 text-lg"
             >
-              Work
+              See How It Works
             </a>
           </div>
         </div>
@@ -89,5 +85,3 @@ export default function Hero() {
     </section>
   )
 }
-
-

@@ -1,33 +1,37 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: 'About Nielsen data: It is once again very positive for us because while the category fell by 11.6% in value, and the cava category decreased by 5.6%, we are once again the green dot in the data, growing vs. the previous year\'s and increase of market share. These results are clearly related to the MKT campaigns during April and July. So, once again, thank you very much for your wonderful support. We are achieving great things in the UK thanks to these impactful marketing campaigns.',
-      author: 'Codorníu Raventos',
-      role: 'International Brand Manager Europe & Asia',
+      quote: 'Saved us so much money compared to traditional photographers. The content was amazing and we got it the same night! Perfect for our brand launch.',
+      author: 'Sarah Chen',
+      role: 'Marketing Director, Tech Startup',
+      event: 'Brand Launch Event',
     },
     {
-      quote: 'Freshers is such a pivotal moment for UNiDAYS. As the UK\'s leading student platform, working with a tried and trusted team was key. We\'ve found that in One Day. Their professionalism and unique approach to measuring effectiveness and incrementality is truly exceptional.',
-      author: 'Mark Hodson',
-      role: 'VP of Marketing at UNiDAYS',
+      quote: 'Didn\'t even notice the creator was there. The photos looked so natural and authentic. Our guests loved them and we had content to post immediately.',
+      author: 'James Mitchell',
+      role: 'Event Organizer',
+      event: 'Corporate Networking Event',
     },
     {
-      quote: 'We needed a digital agency that rocks the pants off it in the social & digital space that was fast, flexible, insightful and fun. Critical for us was someone that was responsive, really understood paid digital, and had the ability to make short, sharp, quick creative ads. One Day is that Agency. We are extremely excited to see what 2021 brings working with the talented team as we launch into the UK.',
-      author: 'General Manager',
-      role: 'Itchy Baby Co',
+      quote: 'Got content the same night which was perfect for our social media. The highlight reel was incredible and saved us so much time. Highly recommend!',
+      author: 'Emma Thompson',
+      role: 'Wedding Planner',
+      event: 'Wedding Reception',
     },
     {
-      quote: 'It was an incredible experience partnering with IDA agency. We handed them a strict budget, and they met it and exceeded our expectations. Their professionalism, creativity, and unwavering support were instrumental in our campaign\'s success. From designing ad t picking locations and strategies, the were with us every step of the way, and we couldn\'t be happier with the results.',
-      author: 'Gurveer Chana',
-      role: 'BigCommerce\'s Demand Generation Manager',
+      quote: 'The iPhone quality was better than I expected. Professional, modern, and exactly what we needed for our influencer event. Fast delivery too!',
+      author: 'Michael Rodriguez',
+      role: 'Brand Manager',
+      event: 'Influencer Launch Party',
     },
   ]
 
   return (
-    <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-            What our clients are saying…
+            What Our Clients Say
           </h2>
           <div className="w-24 h-1 bg-accent-orange mx-auto"></div>
         </div>
@@ -36,7 +40,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-8 shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-accent-orange"
+              className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-xl transition-all transform hover:-translate-y-1 border-l-4 border-accent-orange"
             >
               <div className="mb-4">
                 <svg className="w-8 h-8 text-accent-orange" fill="currentColor" viewBox="0 0 24 24">
@@ -49,6 +53,7 @@ export default function Testimonials() {
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-bold text-black">{testimonial.author}</p>
                 <p className="text-sm text-gray-600">{testimonial.role}</p>
+                <p className="text-xs text-accent-orange mt-1">{testimonial.event}</p>
               </div>
             </div>
           ))}
@@ -57,5 +62,3 @@ export default function Testimonials() {
     </section>
   )
 }
-
-

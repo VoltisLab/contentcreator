@@ -7,33 +7,53 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: 'What exactly is an integrated agency?',
-      answer: 'An integrated agency is the only agency you need for marketing and advertising. There\'s no longer a distinction between an advertising agency, a media agency, a digital marketing agency or a creative agency. We believe consistency across channels is key. As an integrated agency, we specialise in managing multiplatform marketing campaigns from concept to delivery. With an all-senior, multi-disciplinary team, we manage all moving parts to deliver creative out-of-home, PPC, TV, Radio and Digital campaigns.',
+      question: 'Is iPhone quality good enough for professional events?',
+      answer: 'Absolutely. Modern iPhones (iPhone 14 Pro and newer) shoot in ProRes and capture cinematic-quality photos and video. Combined with trained creators who understand lighting, composition, and storytelling, you get professional results. Many major brands and influencers use iPhone content for their campaigns.',
     },
     {
-      question: 'Why One Day?',
-      answer: 'With offices in London, Manchester, Warsaw, Paris and Berlin, our goal is to transcend traditional agency-brand barriers, methodologies, and models. With an all-senior team, we strive to cultivate seamless relationships, eradicating knowledge silos by bridging the divides between creative, media, and digital spheres.',
+      question: 'How fast is delivery?',
+      answer: 'Standard packages include 24-hour delivery. Our Standard and Premium packages offer same-night delivery. For live content drops, you can receive content during the event for real-time posting.',
     },
     {
-      question: 'Do we work internationally?',
-      answer: 'Yes, One Day Agency works with brands across the globe. Our campaigns have spanned Europe, the Middle East, North America and beyond, delivering impact across borders.',
+      question: 'Can guests request photos?',
+      answer: 'Yes! We capture crowd shots and candid moments throughout the event. Guests can request specific photos, and we\'ll do our best to capture them. For larger events, we recommend the Premium package which includes more comprehensive coverage.',
     },
     {
-      question: 'Are you a media agency or a digital agency? Or...?',
-      answer: 'We\'re an integrated agency — bridging the gap between media and digital to offer the best of both worlds. We have a full-service media planning and buying team covering OOH, TV, radio and more, alongside a performance marketing team that drives results across paid social, search, programmatic and beyond. What makes One Day unique is how these teams work together, not in silos. Creative, media and digital are aligned from day one, delivering smarter, faster and more effective campaigns.',
+      question: 'What if my event runs late?',
+      answer: 'No problem. We understand events can run over. We\'ll stay until the end (with reasonable overtime charges) or until you\'re satisfied with coverage. This is discussed during booking.',
     },
     {
-      question: 'Do you work with B2C or B2B brands?',
-      answer: 'Both. One Day Agency works across B2C and B2B, and often with brands that blur the lines between the two. Our integrated approach adapts to the audience, not the label — whether we\'re driving mass reach for a consumer brand or targeting niche decision-makers for a B2B campaign. What matters is crafting the right strategy, creative and media mix to reach your goals, regardless of the sector.',
+      question: 'Can I book last minute?',
+      answer: 'We do our best to accommodate last-minute bookings. Availability depends on creator schedules. For events within 48 hours, please contact us directly and we\'ll check availability immediately.',
+    },
+    {
+      question: 'What formats do you deliver?',
+      answer: 'We deliver photos in high-resolution JPEG and videos in MP4 format. All content is optimized for social media (Instagram, TikTok, LinkedIn) and comes in vertical, horizontal, and square formats. Raw files available on request.',
+    },
+    {
+      question: 'Do you edit the content?',
+      answer: 'Yes! All packages include basic color correction and optimization. Standard and Premium packages include more advanced editing. You can also add professional color grading as an add-on.',
+    },
+    {
+      question: 'What areas do you cover?',
+      answer: 'We currently cover major cities in the UK (London, Manchester, Birmingham, Leeds, etc.). For events outside these areas, travel costs may apply. Contact us to discuss your location.',
+    },
+    {
+      question: 'Can I see examples of your work?',
+      answer: 'Absolutely! Check out our gallery section or contact us and we\'ll send you a portfolio of recent events. We\'re happy to show examples specific to your event type.',
+    },
+    {
+      question: 'What happens if the creator doesn\'t show up?',
+      answer: 'This has never happened, but we have backup plans. If for any reason your assigned creator can\'t make it, we have a network of trained creators and will send a replacement. Your event coverage is guaranteed.',
     },
   ]
 
   return (
-    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-            Frequently Asked Questions.
+            Frequently Asked Questions
           </h2>
           <div className="w-24 h-1 bg-accent-orange mx-auto"></div>
         </div>
@@ -42,10 +62,10 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden hover:border-accent-orange/50 transition-colors"
+              className="border border-gray-200 rounded-lg overflow-hidden hover:border-accent-orange/50 transition-colors bg-white"
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center bg-white hover:bg-accent-orange/5 transition-colors group"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent-orange/5 transition-colors group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <h3 className="text-lg font-semibold text-black pr-4 group-hover:text-accent-orange transition-colors">
@@ -77,5 +97,3 @@ export default function FAQ() {
     </section>
   )
 }
-
-

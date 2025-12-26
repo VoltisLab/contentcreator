@@ -7,8 +7,8 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'One Day Agency: Integrated Advertising and Marketing Agency',
-  description: 'Creative, Media, Digital Marketing and Advertising in Manchester, London, Warsaw, Paris and Berlin.',
+  title: 'Content Creator - Professional Event Content Shot on iPhone',
+  description: 'Professional event photos and videos captured on iPhone. Fast, discreet, and social-ready. No bulky cameras. Same-night delivery. Perfect for birthdays, weddings, corporate events, and more.',
 }
 
 export default function RootLayout({
@@ -26,5 +26,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-

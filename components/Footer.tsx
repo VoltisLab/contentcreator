@@ -1,67 +1,22 @@
 import Link from 'next/link'
 
 export default function Footer() {
-  const services = [
-    'Digital Marketing',
-    'Influencer Marketing',
-    'Media Buying and Planning',
-    'PPC & Paid Social Workshops',
-    'Local Advertising',
-    'Ecommerce SEO',
-    'Shopify Stores',
-    'International Advertising',
-    'Student Marketing',
-    'Healthcare Marketing',
-    'Crypto Advertising',
-    'Destination Marketing',
-    'Football Sponsorships',
+  const quickLinks = [
+    { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Packages', href: '#packages' },
+    { name: 'Event Types', href: '#event-types' },
+    { name: 'Add-Ons', href: '#add-ons' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'FAQ', href: '#faq' },
   ]
 
-  const oohServices = [
-    'Outdoor advertising',
-    'Billboard Advertising',
-    'Radio Advertising',
-    'Taxi Advertising',
-    'Tube Ads',
-    'Transport Advertising',
-    'Bus Advertising',
-    'Rail Advertising',
-    '3D Billboards',
-    'Wall Mural Advertising',
-    'Airport Advertising',
-    'Anamorphic Billboards',
-  ]
-
-  const digitalServices = [
-    'PPC',
-    'Paid Social',
-    'Digital TV Advertising',
-    'Digital Billboards',
-    'DOOH',
-    'Programmatic Display Advertising',
-  ]
-
-  const offices = [
-    {
-      name: 'Manchester Office HQ',
-      address: '5th Floor, One Day Agency, Phoenix House, 45 Cross St, Manchester M2 4JF',
-    },
-    {
-      name: 'London Office',
-      address: '16 Great Chapel St, W1F 8FL',
-    },
-    {
-      name: 'Warsaw Office',
-      address: 'Prosta 20/00-850, 00-850 Warszawa',
-    },
-    {
-      name: 'Paris Office',
-      address: '33 Rue La Fayette, 75009 Paris',
-    },
-    {
-      name: 'Berlin Office',
-      address: 'Dircksenstraße 3, 10179 Berlin',
-    },
+  const eventTypes = [
+    'Birthday Parties',
+    'Weddings',
+    'Corporate Events',
+    'Brand Launches',
+    'Networking Events',
+    'Fashion Shows',
   ]
 
   return (
@@ -71,14 +26,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center">
-              Services
+              Quick Links
               <span className="ml-2 w-8 h-0.5 bg-accent-orange"></span>
             </h3>
             <ul className="space-y-2 text-sm">
-              {services.slice(0, 6).map((service, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-orange transition-colors">
-                    {service}
+                  <Link href={link.href} className="hover:text-accent-orange transition-colors">
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -87,14 +42,14 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center">
-              Out of Home
+              Event Types
               <span className="ml-2 w-8 h-0.5 bg-accent-blue"></span>
             </h3>
             <ul className="space-y-2 text-sm">
-              {oohServices.slice(0, 6).map((service, index) => (
+              {eventTypes.map((type, index) => (
                 <li key={index}>
-                  <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-blue transition-colors">
-                    {service}
+                  <Link href="#event-types" className="hover:text-accent-blue transition-colors">
+                    {type}
                   </Link>
                 </li>
               ))}
@@ -103,88 +58,44 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center">
-              Digital Media
+              Services
               <span className="ml-2 w-8 h-0.5 bg-accent-green"></span>
             </h3>
             <ul className="space-y-2 text-sm">
-              {digitalServices.map((service, index) => (
-                <li key={index}>
-                  <Link href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-green transition-colors">
-                    {service}
-                  </Link>
-                </li>
-              ))}
+              <li><Link href="#packages" className="hover:text-accent-green transition-colors">Starter Package</Link></li>
+              <li><Link href="#packages" className="hover:text-accent-green transition-colors">Standard Package</Link></li>
+              <li><Link href="#packages" className="hover:text-accent-green transition-colors">Premium Package</Link></li>
+              <li><Link href="#add-ons" className="hover:text-accent-green transition-colors">Add-Ons</Link></li>
+              <li><Link href="#add-ons" className="hover:text-accent-green transition-colors">Custom Packages</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-white font-bold mb-4 flex items-center">
-              More from One Day
+              Contact
               <span className="ml-2 w-8 h-0.5 bg-accent-yellow"></span>
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/approach" className="hover:text-accent-yellow transition-colors">Approach</Link></li>
-              <li><Link href="/creative" className="hover:text-accent-yellow transition-colors">Creative</Link></li>
-              <li><Link href="/work" className="hover:text-accent-yellow transition-colors">Work and Clients</Link></li>
+              <li><Link href="#book" className="hover:text-accent-yellow transition-colors">Book Your Event</Link></li>
               <li><Link href="/about" className="hover:text-accent-yellow transition-colors">About Us</Link></li>
-              <li><Link href="/news" className="hover:text-accent-yellow transition-colors">Blog, News, and Updates</Link></li>
-              <li><Link href="/careers" className="hover:text-accent-yellow transition-colors">Careers</Link></li>
+              <li><a href="mailto:hello@contentcreator.com" className="hover:text-accent-yellow transition-colors">hello@contentcreator.com</a></li>
+              <li><a href="tel:+447000000000" className="hover:text-accent-yellow transition-colors">+44 700 000 0000</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <h3 className="text-white font-bold mb-6">Offices</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {offices.map((office, index) => (
-              <div key={index}>
-                <h4 className="text-white font-semibold mb-2">{office.name}</h4>
-                <p className="text-sm">{office.address}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <h3 className="text-white font-bold mb-4">Recognised by</h3>
-          <div className="flex flex-wrap gap-4 text-sm">
-            <span>World Out of Home Organization</span>
-            <span>•</span>
-            <span>Meta Business Partner Agency</span>
-            <span>•</span>
-            <span>Top 50 Integrated Agency</span>
-            <span>•</span>
-            <span>Google Partner Agency</span>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <h3 className="text-white font-bold mb-4">Contact</h3>
-          <div className="space-y-2 text-sm">
-            <p>Email: <a href="mailto:hello@oneday.agency" className="hover:text-accent-orange transition-colors">hello@oneday.agency</a></p>
-            <p>Phone: <a href="tel:+442038058593" className="hover:text-accent-orange transition-colors">+44 020 3805 8593</a></p>
-            <div className="flex gap-4 mt-4">
-              <Link href="/contact" className="hover:text-accent-orange transition-colors">Book a video call</Link>
-              <span className="text-accent-orange">•</span>
-              <Link href="/contact" className="hover:text-accent-orange transition-colors">WhatsApp Message</Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-800 pt-8 text-center text-sm">
+        <div className="border-t border-gray-800 pt-8 text-center">
           <p className="mb-2">
-            <strong className="text-white">One Day Agency</strong>
+            <strong className="text-white">Content Creator</strong>
           </p>
-          <p className="text-gray-500">
-            A trademark of 1D Agency Ltd, Company No. 11682013 VAT No. 376 0264 93.
+          <p className="text-gray-500 text-sm mb-2">
+            Professional event content, minus the stress.
           </p>
-          <p className="text-gray-500 mt-2">
-            Copyright © All rights reserved.
+          <p className="text-gray-500 text-sm">
+            Copyright © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   )
 }
-
-
