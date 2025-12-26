@@ -17,23 +17,17 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
+        {/* Using Pexels event image as background */}
+        <img
+          src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Event background"
           className="absolute inset-0 w-full h-full object-cover"
-          onLoadedData={() => setIsVideoLoaded(true)}
-          poster="/hero-poster.jpg"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-          <source src="/hero-video.webm" type="video/webm" />
-        </video>
+          onLoad={() => setIsVideoLoaded(true)}
+        />
         {!isVideoLoaded && (
           <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-white to-gray-50"></div>
         )}
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
       </div>
 
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">

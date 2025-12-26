@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Portfolio() {
@@ -15,26 +14,176 @@ export default function Portfolio() {
     { id: 'party', name: 'Parties' },
   ]
 
-  // Portfolio images - using placeholder structure
+  // Real Pexels event images - diverse event photography
   const portfolioItems = [
-    { id: 1, category: 'wedding', image: '/portfolio/wedding-1.jpg', title: 'Wedding Reception', description: 'Natural moments captured throughout the evening' },
-    { id: 2, category: 'corporate', image: '/portfolio/corporate-1.jpg', title: 'Corporate Networking', description: 'Professional event coverage' },
-    { id: 3, category: 'birthday', image: '/portfolio/birthday-1.jpg', title: 'Birthday Celebration', description: 'Candid party moments' },
-    { id: 4, category: 'launch', image: '/portfolio/launch-1.jpg', title: 'Product Launch', description: 'Brand event coverage' },
-    { id: 5, category: 'party', image: '/portfolio/party-1.jpg', title: 'Club Night', description: 'Dynamic nightlife content' },
-    { id: 6, category: 'wedding', image: '/portfolio/wedding-2.jpg', title: 'Garden Wedding', description: 'Outdoor celebration' },
-    { id: 7, category: 'corporate', image: '/portfolio/corporate-2.jpg', title: 'Conference', description: 'Professional gathering' },
-    { id: 8, category: 'birthday', image: '/portfolio/birthday-2.jpg', title: '30th Birthday', description: 'Milestone celebration' },
-    { id: 9, category: 'launch', image: '/portfolio/launch-2.jpg', title: 'Fashion Launch', description: 'Style event coverage' },
-    { id: 10, category: 'party', image: '/portfolio/party-2.jpg', title: 'Summer Party', description: 'Outdoor celebration' },
-    { id: 11, category: 'wedding', image: '/portfolio/wedding-3.jpg', title: 'Intimate Wedding', description: 'Small ceremony' },
-    { id: 12, category: 'corporate', image: '/portfolio/corporate-3.jpg', title: 'Awards Night', description: 'Formal event' },
-    { id: 13, category: 'birthday', image: '/portfolio/birthday-3.jpg', title: 'Kids Party', description: 'Family celebration' },
-    { id: 14, category: 'launch', image: '/portfolio/launch-3.jpg', title: 'Tech Launch', description: 'Innovation showcase' },
-    { id: 15, category: 'party', image: '/portfolio/party-3.jpg', title: 'Rooftop Party', description: 'City views' },
-    { id: 16, category: 'wedding', image: '/portfolio/wedding-4.jpg', title: 'Beach Wedding', description: 'Coastal celebration' },
-    { id: 17, category: 'corporate', image: '/portfolio/corporate-4.jpg', title: 'Team Building', description: 'Company event' },
-    { id: 18, category: 'birthday', image: '/portfolio/birthday-4.jpg', title: 'Surprise Party', description: 'Special moment' },
+    { 
+      id: 1, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Wedding Reception', 
+      description: 'Natural moments captured throughout the evening' 
+    },
+    { 
+      id: 2, 
+      category: 'corporate', 
+      image: 'https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Corporate Networking', 
+      description: 'Professional event coverage' 
+    },
+    { 
+      id: 3, 
+      category: 'birthday', 
+      image: 'https://images.pexels.com/photos/3171815/pexels-photo-3171815.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Birthday Celebration', 
+      description: 'Candid party moments' 
+    },
+    { 
+      id: 4, 
+      category: 'launch', 
+      image: 'https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Product Launch', 
+      description: 'Brand event coverage' 
+    },
+    { 
+      id: 5, 
+      category: 'party', 
+      image: 'https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Club Night', 
+      description: 'Dynamic nightlife content' 
+    },
+    { 
+      id: 6, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Garden Wedding', 
+      description: 'Outdoor celebration' 
+    },
+    { 
+      id: 7, 
+      category: 'corporate', 
+      image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Conference', 
+      description: 'Professional gathering' 
+    },
+    { 
+      id: 8, 
+      category: 'birthday', 
+      image: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: '30th Birthday', 
+      description: 'Milestone celebration' 
+    },
+    { 
+      id: 9, 
+      category: 'launch', 
+      image: 'https://images.pexels.com/photos/1181400/pexels-photo-1181400.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Fashion Launch', 
+      description: 'Style event coverage' 
+    },
+    { 
+      id: 10, 
+      category: 'party', 
+      image: 'https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Summer Party', 
+      description: 'Outdoor celebration' 
+    },
+    { 
+      id: 11, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Intimate Wedding', 
+      description: 'Small ceremony' 
+    },
+    { 
+      id: 12, 
+      category: 'corporate', 
+      image: 'https://images.pexels.com/photos/1181403/pexels-photo-1181403.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Awards Night', 
+      description: 'Formal event' 
+    },
+    { 
+      id: 13, 
+      category: 'birthday', 
+      image: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Kids Party', 
+      description: 'Family celebration' 
+    },
+    { 
+      id: 14, 
+      category: 'launch', 
+      image: 'https://images.pexels.com/photos/1181398/pexels-photo-1181398.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Tech Launch', 
+      description: 'Innovation showcase' 
+    },
+    { 
+      id: 15, 
+      category: 'party', 
+      image: 'https://images.pexels.com/photos/1190299/pexels-photo-1190299.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Rooftop Party', 
+      description: 'City views' 
+    },
+    { 
+      id: 16, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Beach Wedding', 
+      description: 'Coastal celebration' 
+    },
+    { 
+      id: 17, 
+      category: 'corporate', 
+      image: 'https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Team Building', 
+      description: 'Company event' 
+    },
+    { 
+      id: 18, 
+      category: 'birthday', 
+      image: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Surprise Party', 
+      description: 'Special moment' 
+    },
+    { 
+      id: 19, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Wedding Ceremony', 
+      description: 'Beautiful moments' 
+    },
+    { 
+      id: 20, 
+      category: 'corporate', 
+      image: 'https://images.pexels.com/photos/1181404/pexels-photo-1181404.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Business Event', 
+      description: 'Professional networking' 
+    },
+    { 
+      id: 21, 
+      category: 'party', 
+      image: 'https://images.pexels.com/photos/1190296/pexels-photo-1190296.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Night Party', 
+      description: 'Evening celebration' 
+    },
+    { 
+      id: 22, 
+      category: 'launch', 
+      image: 'https://images.pexels.com/photos/1181399/pexels-photo-1181399.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Brand Launch', 
+      description: 'Product reveal' 
+    },
+    { 
+      id: 23, 
+      category: 'birthday', 
+      image: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Birthday Party', 
+      description: 'Celebration moments' 
+    },
+    { 
+      id: 24, 
+      category: 'wedding', 
+      image: 'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop', 
+      title: 'Wedding Party', 
+      description: 'Joyful celebration' 
+    },
   ]
 
   const filteredItems = selectedCategory === 'all' 
@@ -78,25 +227,11 @@ export default function Portfolio() {
               key={item.id}
               className="group relative aspect-square overflow-hidden rounded-lg bg-gray-200 hover:shadow-xl transition-all cursor-pointer"
             >
-              <Image
+              <img
                 src={item.image}
                 alt={item.title}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement
-                  target.style.display = 'none'
-                  const parent = target.parentElement
-                  if (parent) {
-                    parent.className = 'group relative aspect-square overflow-hidden rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center'
-                    parent.innerHTML = `
-                      <div class="text-center p-4">
-                        <div class="text-4xl mb-2">📸</div>
-                        <p class="text-sm text-gray-600 font-medium">${item.title}</p>
-                      </div>
-                    `
-                  }
-                }}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
@@ -120,4 +255,3 @@ export default function Portfolio() {
     </section>
   )
 }
-
