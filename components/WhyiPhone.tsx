@@ -33,13 +33,13 @@ export default function WhyiPhone() {
   ]
 
   return (
-    <section className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Why iPhone?
           </h2>
-          <div className="w-24 h-1 bg-accent-orange mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             iPhone cameras are now industry-level. Combined with trained creators, you get professional event content without the traditional photographer overhead.
           </p>
@@ -49,7 +49,7 @@ export default function WhyiPhone() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-1"
+              className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1 border border-gray-200/50"
             >
               <div className="text-4xl mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-bold text-black mb-3">{benefit.title}</h3>
@@ -59,7 +59,7 @@ export default function WhyiPhone() {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mt-12">
+        <div className="bg-white/80 backdrop-blur-md rounded-lg shadow-sm p-8 mt-12 border border-gray-200/50">
           <h3 className="text-2xl font-bold text-black mb-8 text-center">Traditional Photographer vs iPhone Creator</h3>
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -67,7 +67,7 @@ export default function WhyiPhone() {
                 <tr className="border-b-2 border-gray-200">
                   <th className="text-left py-4 px-4 font-semibold text-gray-700"></th>
                   <th className="text-center py-4 px-4 font-semibold text-gray-700">Traditional Photographer</th>
-                  <th className="text-center py-4 px-4 font-semibold text-accent-orange">iPhone Creator</th>
+                  <th className="text-center py-4 px-4 font-semibold text-gray-900">iPhone Creator</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -96,6 +96,11 @@ export default function WhyiPhone() {
                   <td className="py-4 px-4 text-center text-gray-600">Requires editing</td>
                   <td className="py-4 px-4 text-center text-gray-600">Ready to post</td>
                 </tr>
+                <tr>
+                  <td className="py-4 px-4 font-medium">BTS Option</td>
+                  <td className="py-4 px-4 text-center text-gray-600">Not typically offered</td>
+                  <td className="py-4 px-4 text-center text-gray-600">Perfect for BTS coverage</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -104,4 +109,3 @@ export default function WhyiPhone() {
     </section>
   )
 }
-

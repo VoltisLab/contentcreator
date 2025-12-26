@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import HowItWorks from '@/components/HowItWorks'
 import WhyiPhone from '@/components/WhyiPhone'
 import EventTypes from '@/components/EventTypes'
+import Portfolio from '@/components/Portfolio'
 import Packages from '@/components/Packages'
 import AddOns from '@/components/AddOns'
 import Testimonials from '@/components/Testimonials'
@@ -15,6 +16,7 @@ export default function Home() {
       <HowItWorks />
       <WhyiPhone />
       <EventTypes />
+      <Portfolio />
       <Packages />
       <AddOns />
       <Testimonials />

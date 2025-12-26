@@ -81,7 +81,7 @@ export default function AddOns() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Optional Add-Ons
           </h2>
-          <div className="w-24 h-1 bg-accent-orange mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Enhance your package with these optional services. Mix and match to create the perfect experience.
           </p>
@@ -97,12 +97,12 @@ export default function AddOns() {
             {onTheNight.map((addon, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all border-2 border-transparent hover:border-accent-orange"
+                className="bg-white/60 backdrop-blur-sm rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
                 <div className="text-4xl mb-3">{addon.icon}</div>
                 <h4 className="font-bold text-black mb-2">{addon.title}</h4>
                 <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-accent-orange">{addon.price}</p>
+                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>
@@ -118,12 +118,12 @@ export default function AddOns() {
             {postEvent.map((addon, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-all border-2 border-transparent hover:border-accent-purple"
+                className="bg-white/60 backdrop-blur-sm rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
                 <div className="text-4xl mb-3">{addon.icon}</div>
                 <h4 className="font-bold text-black mb-2">{addon.title}</h4>
                 <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-accent-purple">{addon.price}</p>
+                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>
@@ -139,12 +139,12 @@ export default function AddOns() {
             {premium.map((addon, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-accent-orange/10 to-accent-purple/10 rounded-lg p-6 hover:shadow-lg transition-all border-2 border-transparent hover:border-accent-orange"
+                className="bg-white/80 backdrop-blur-md rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
                 <div className="text-4xl mb-3">{addon.icon}</div>
                 <h4 className="font-bold text-black mb-2">{addon.title}</h4>
                 <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-accent-orange">{addon.price}</p>
+                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>
@@ -153,4 +153,3 @@ export default function AddOns() {
     </section>
   )
 }
-

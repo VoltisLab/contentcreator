@@ -19,7 +19,7 @@ export default function EventTypes() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Perfect For Every Event
           </h2>
-          <div className="w-24 h-1 bg-accent-orange mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             From intimate dinners to large-scale launches, we capture your event content naturally and professionally.
           </p>
@@ -29,10 +29,10 @@ export default function EventTypes() {
           {eventTypes.map((event, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all transform hover:-translate-y-1 cursor-pointer group"
+              className="bg-white/80 backdrop-blur-sm rounded-lg p-6 text-center hover:shadow-md transition-all transform hover:-translate-y-1 cursor-pointer group border border-gray-200/50"
             >
               <div className="text-5xl mb-3 group-hover:scale-110 transition-transform">{event.icon}</div>
-              <h3 className="text-sm font-semibold text-gray-800 group-hover:text-accent-orange transition-colors">
+              <h3 className="text-sm font-semibold text-gray-800 group-hover:text-gray-900 transition-colors">
                 {event.name}
               </h3>
             </div>
@@ -42,4 +42,3 @@ export default function EventTypes() {
     </section>
   )
 }
-

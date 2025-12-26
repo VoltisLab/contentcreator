@@ -11,6 +11,10 @@ export default function FAQ() {
       answer: 'Absolutely. Modern iPhones (iPhone 14 Pro and newer) shoot in ProRes and capture cinematic-quality photos and video. Combined with trained creators who understand lighting, composition, and storytelling, you get professional results. Many major brands and influencers use iPhone content for their campaigns.',
     },
     {
+      question: 'Can you work as a BTS (Behind-the-Scenes) photographer?',
+      answer: 'Yes! If you already have a main photographer, our creators can work alongside them as your BTS photographer. This is perfect for capturing candid moments, behind-the-scenes content, and additional angles that your main photographer might miss. Just let us know when booking.',
+    },
+    {
       question: 'How fast is delivery?',
       answer: 'Standard packages include 24-hour delivery. Our Standard and Premium packages offer same-night delivery. For live content drops, you can receive content during the event for real-time posting.',
     },
@@ -40,39 +44,35 @@ export default function FAQ() {
     },
     {
       question: 'Can I see examples of your work?',
-      answer: 'Absolutely! Check out our gallery section or contact us and we\'ll send you a portfolio of recent events. We\'re happy to show examples specific to your event type.',
-    },
-    {
-      question: 'What happens if the creator doesn\'t show up?',
-      answer: 'This has never happened, but we have backup plans. If for any reason your assigned creator can\'t make it, we have a network of trained creators and will send a replacement. Your event coverage is guaranteed.',
+      answer: 'Absolutely! Check out our portfolio section or contact us and we\'ll send you a portfolio of recent events. We\'re happy to show examples specific to your event type.',
     },
   ]
 
   return (
-    <section id="faq" className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Frequently Asked Questions
           </h2>
-          <div className="w-24 h-1 bg-accent-orange mx-auto"></div>
+          <div className="w-24 h-1 bg-gray-300 mx-auto"></div>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 rounded-lg overflow-hidden hover:border-accent-orange/50 transition-colors bg-white"
+              className="border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 transition-colors bg-white"
             >
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-accent-orange/5 transition-colors group"
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50/50 transition-colors group"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h3 className="text-lg font-semibold text-black pr-4 group-hover:text-accent-orange transition-colors">
+                <h3 className="text-lg font-semibold text-black pr-4 group-hover:text-gray-900 transition-colors">
                   {faq.question}
                 </h3>
                 <svg
-                  className={`w-5 h-5 text-accent-orange flex-shrink-0 transition-transform ${
+                  className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform ${
                     openIndex === index ? 'transform rotate-180' : ''
                   }`}
                   fill="none"
@@ -86,7 +86,7 @@ export default function FAQ() {
                 </svg>
               </button>
               {openIndex === index && (
-                <div className="px-6 py-4 bg-accent-orange/5 border-t border-accent-orange/20 animate-fade-in">
+                <div className="px-6 py-4 bg-gray-50/50 border-t border-gray-200 animate-fade-in">
                   <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                 </div>
               )}

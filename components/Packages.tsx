@@ -2,7 +2,7 @@ export default function Packages() {
   const packages = [
     {
       name: 'Starter',
-      price: '£299',
+      price: '£189',
       duration: '2 hours',
       features: [
         '1 trained content creator',
@@ -11,13 +11,13 @@ export default function Packages() {
         '24-hour delivery',
         'Cloud link access',
         'Social-ready content',
+        'Can work as BTS photographer',
       ],
       popular: false,
-      color: 'accent-blue',
     },
     {
       name: 'Standard',
-      price: '£499',
+      price: '£299',
       duration: '4 hours',
       features: [
         '1 trained content creator',
@@ -27,16 +27,16 @@ export default function Packages() {
         'Instagram Stories ready',
         'Basic color correction',
         'Cloud link + direct download',
+        'Perfect as BTS photographer',
       ],
       popular: true,
-      color: 'accent-orange',
     },
     {
       name: 'Premium',
-      price: '£799',
-      duration: 'Full event',
+      price: '£499',
+      duration: 'Full event (up to 8hrs)',
       features: [
-        'Full event coverage',
+        'Full event coverage (up to 8 hours)',
         '60-90 second highlight reel',
         'Priority same-night delivery',
         'Advanced edits & color grading',
@@ -44,9 +44,9 @@ export default function Packages() {
         'Guest mini-interviews',
         'Social media scheduling support',
         'Add-on flexibility',
+        'Dedicated BTS photographer option',
       ],
       popular: false,
-      color: 'accent-purple',
     },
   ]
 
@@ -57,9 +57,12 @@ export default function Packages() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Packages & Pricing
           </h2>
-          <div className="w-24 h-1 bg-accent-orange mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Choose the package that fits your event. Custom events? Build your own package.
+          </p>
+          <p className="text-sm text-gray-500 mt-4 italic">
+            * Our creators can also work as your behind-the-scenes (BTS) photographer if you already have a main photographer
           </p>
         </div>
 
@@ -67,15 +70,15 @@ export default function Packages() {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-lg shadow-lg p-8 border-2 transition-all transform hover:-translate-y-2 ${
+              className={`relative bg-white rounded-lg shadow-sm p-8 border-2 transition-all transform hover:-translate-y-2 ${
                 pkg.popular
-                  ? 'border-accent-orange scale-105'
-                  : 'border-gray-200 hover:border-accent-orange'
+                  ? 'border-gray-300 scale-105 shadow-lg bg-gray-50/50 backdrop-blur-sm'
+                  : 'border-gray-200 hover:border-gray-300'
               }`}
             >
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-accent-orange text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-white/90 backdrop-blur-md text-gray-800 px-4 py-1 rounded-full text-sm font-semibold border border-gray-200 shadow-sm">
                     Most Popular
                   </span>
                 </div>
@@ -92,7 +95,7 @@ export default function Packages() {
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
-                    <svg className="w-5 h-5 text-accent-orange mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-5 h-5 text-gray-400 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span className="text-gray-700">{feature}</span>
@@ -104,7 +107,7 @@ export default function Packages() {
                 href="#book"
                 className={`block w-full text-center px-6 py-3 rounded-md font-semibold transition-all ${
                   pkg.popular
-                    ? 'bg-accent-orange text-white hover:bg-accent-orange/90'
+                    ? 'bg-gray-900 text-white hover:bg-gray-800'
                     : 'bg-gray-100 text-black hover:bg-gray-200'
                 }`}
               >
@@ -118,7 +121,7 @@ export default function Packages() {
           <p className="text-gray-600 mb-4">Need something custom?</p>
           <a
             href="#book"
-            className="inline-block px-8 py-4 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all transform hover:scale-105 shadow-lg"
+            className="inline-block px-8 py-4 bg-white/80 backdrop-blur-md text-gray-900 font-semibold rounded-md hover:bg-white transition-all transform hover:scale-105 shadow-sm border border-gray-200"
           >
             Build Your Own Package
           </a>
@@ -127,4 +130,3 @@ export default function Packages() {
     </section>
   )
 }
-
