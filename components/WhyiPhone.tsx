@@ -43,6 +43,9 @@ export default function WhyiPhone() {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             iPhone cameras are now industry-level. Combined with trained creators, you get professional event content without the traditional photographer overhead.
           </p>
+          <p className="text-base text-gray-600 max-w-3xl mx-auto mt-4 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-lg border border-gray-200/50">
+            <strong>For bigger jobs:</strong> We also have professional camera equipment including Canon G7X cameras, tripods, lighting rigs, and all the equipment a professional camera operator would use. Perfect for larger events, corporate productions, or when you need that extra level of polish.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

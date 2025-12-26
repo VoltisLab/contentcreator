@@ -55,6 +55,12 @@ export default function AddOns() {
 
   const premium = [
     {
+      title: 'Professional Camera Equipment',
+      description: 'Canon G7X camera, tripods, lighting rigs, and all professional camera operator equipment',
+      price: '+£199',
+      icon: '📷',
+    },
+    {
       title: 'Second Content Creator',
       description: 'Double coverage for larger events',
       price: '+£299',

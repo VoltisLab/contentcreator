@@ -17,6 +17,7 @@ function CheckoutForm() {
     eventType: '',
     additionalNotes: '',
     btsPhotographer: false,
+    professionalEquipment: false,
   })
 
   const packages = {
@@ -63,6 +64,7 @@ function CheckoutForm() {
         'Social media scheduling support',
         'Add-on flexibility',
         'Dedicated BTS photographer option',
+        'Professional equipment available (G7X, tripods, lights)',
       ],
     },
   }
@@ -268,18 +270,38 @@ function CheckoutForm() {
                     />
                   </div>
 
-                  <div className="flex items-start">
-                    <input
-                      type="checkbox"
-                      id="btsPhotographer"
-                      name="btsPhotographer"
-                      checked={formData.btsPhotographer}
-                      onChange={handleChange}
-                      className="mt-1 mr-3 w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
-                    />
-                    <label htmlFor="btsPhotographer" className="text-sm text-gray-700">
-                      I would like the content creator to work as a BTS (Behind-The-Scenes) photographer
-                    </label>
+                  <div className="space-y-4">
+                    <div className="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="btsPhotographer"
+                        name="btsPhotographer"
+                        checked={formData.btsPhotographer}
+                        onChange={handleChange}
+                        className="mt-1 mr-3 w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+                      />
+                      <label htmlFor="btsPhotographer" className="text-sm text-gray-700">
+                        I would like the content creator to work as a BTS (Behind-The-Scenes) photographer
+                      </label>
+                    </div>
+                    <div className="flex items-start bg-gray-50 p-4 rounded-lg border border-gray-200">
+                      <input
+                        type="checkbox"
+                        id="professionalEquipment"
+                        name="professionalEquipment"
+                        checked={formData.professionalEquipment}
+                        onChange={handleChange}
+                        className="mt-1 mr-3 w-4 h-4 text-gray-900 border-gray-300 rounded focus:ring-gray-900"
+                      />
+                      <div>
+                        <label htmlFor="professionalEquipment" className="text-sm font-semibold text-gray-900 block mb-1">
+                          Professional Camera Equipment (+£199)
+                        </label>
+                        <p className="text-xs text-gray-600">
+                          For bigger jobs: Canon G7X camera, tripods, lighting rigs, and all professional camera operator equipment. Perfect for larger events, corporate productions, or when you need that extra level of polish.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div>

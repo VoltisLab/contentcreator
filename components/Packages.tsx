@@ -49,6 +49,7 @@ export default function Packages() {
         'Social media scheduling support',
         'Add-on flexibility',
         'Dedicated BTS photographer option',
+        'Professional equipment available (G7X, tripods, lights)',
       ],
       popular: false,
     },
@@ -67,6 +68,9 @@ export default function Packages() {
           </p>
           <p className="text-sm text-gray-500 mt-4 italic">
             * Our creators can also work as your behind-the-scenes (BTS) photographer if you already have a main photographer
+          </p>
+          <p className="text-sm text-gray-600 mt-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-gray-200/50 max-w-3xl mx-auto">
+            <strong>Professional Equipment Available:</strong> For bigger jobs, we can bring professional camera equipment including Canon G7X cameras, tripods, lighting rigs, and all standard camera operator equipment. Perfect for larger events, corporate productions, or when you need that extra level of polish. Contact us to discuss your needs.
           </p>
         </div>
 
