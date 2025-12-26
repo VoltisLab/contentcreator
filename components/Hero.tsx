@@ -6,28 +6,29 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Wedding images from Pexels
-  const weddingImages = [
-    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-    'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-    'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+  // Event images from Pexels - weddings and birthday celebrations
+  const eventImages = [
+    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop', // Wedding
+    'https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop', // Wedding
+    'https://images.pexels.com/photos/3171815/pexels-photo-3171815.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop', // Birthday cake
+    'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop', // Birthday celebration
+    'https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop', // Wedding
   ]
 
   useEffect(() => {
     setIsLoaded(true)
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % weddingImages.length)
+      setCurrentSlide((prev) => (prev + 1) % eventImages.length)
     }, 5000) // Change slide every 5 seconds
 
     return () => clearInterval(interval)
-  }, [weddingImages.length])
+  }, [eventImages.length])
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Image Slider Background */}
       <div className="absolute inset-0 z-0">
-        {weddingImages.map((image, index) => (
+        {eventImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -36,7 +37,7 @@ export default function Hero() {
           >
             <img
               src={image}
-              alt={`Wedding event ${index + 1}`}
+              alt={`Event ${index + 1}`}
               className="absolute inset-0 w-full h-full object-cover"
               onLoad={() => index === 0 && setIsLoaded(true)}
             />
@@ -97,7 +98,7 @@ export default function Hero() {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
-        {weddingImages.map((_, index) => (
+        {eventImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
