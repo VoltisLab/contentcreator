@@ -8,14 +8,14 @@ function Logo() {
   const [hasError, setHasError] = useState(false)
 
   if (hasError) {
-    return <span className="text-2xl font-bold text-black">Content Creator</span>
+    return <span className="text-2xl font-bold text-black">Momentsmade</span>
   }
 
   return (
     <div className="relative w-32 h-10">
       <Image
         src="/logo.svg"
-        alt="Content Creator"
+        alt="Momentsmade"
         fill
         className="object-contain"
         priority
