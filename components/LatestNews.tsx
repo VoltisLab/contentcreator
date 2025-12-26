@@ -45,7 +45,7 @@ export default function LatestNews() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-            The latest from One Day.
+            The latest from MomentsMade.
           </h2>
           <div className="w-24 h-1 bg-accent-orange mx-auto mb-2"></div>
           <p className="text-gray-600">News, Updates and Blog</p>

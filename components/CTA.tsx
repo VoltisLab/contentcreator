@@ -12,7 +12,7 @@ export default function CTA() {
           Radio, OOH, TV and more.
         </h3>
         <p className="text-lg sm:text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-          Transform your advertising today and learn how we'll influence your buyer. Get in touch with One Day Advertising Agency in Manchester and London.
+          Transform your event content today. Get in touch with MomentsMade for professional event photography and videography.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

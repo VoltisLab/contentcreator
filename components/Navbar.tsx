@@ -8,14 +8,14 @@ function Logo() {
   const [hasError, setHasError] = useState(false)
 
   if (hasError) {
-    return <span className="text-2xl font-bold text-black">Momentsmade</span>
+    return <span className="text-2xl font-bold text-black">MomentsMade</span>
   }
 
   return (
     <div className="relative w-32 h-10">
       <Image
         src="/logo.svg"
-        alt="Momentsmade"
+        alt="MomentsMade"
         fill
         className="object-contain"
         priority
@@ -51,12 +51,12 @@ export default function Navbar() {
                 className="text-gray-700 hover:text-black transition-colors relative group/item"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-orange transition-all group-hover/item:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-900 transition-all group-hover/item:w-full"></span>
               </Link>
             ))}
             <a
               href="#book"
-              className="inline-block px-6 py-2 bg-accent-orange text-white font-semibold rounded-md hover:bg-accent-orange/90 transition-all"
+              className="inline-block px-6 py-2 bg-gray-900 text-white font-semibold rounded-md hover:bg-gray-800 transition-all"
             >
               Book Now
             </a>

@@ -46,7 +46,7 @@ export default function Services() {
     },
     {
       title: 'TV & VOD Advertising',
-      description: 'At One Day Agency, we create impactful TV and Video On Demand (VOD) campaigns for businesses of all sizes. From traditional broadcast TV to leading streaming platforms, we ensure your message connects with the right audience. With expertise across all major networks and services, we craft targeted campaigns that elevate your brand\'s visibility and deliver measurable results in today\'s evolving media landscape.',
+      description: 'At MomentsMade, we create impactful TV and Video On Demand (VOD) campaigns for businesses of all sizes. From traditional broadcast TV to leading streaming platforms, we ensure your message connects with the right audience. With expertise across all major networks and services, we craft targeted campaigns that elevate your brand\'s visibility and deliver measurable results in today\'s evolving media landscape.',
       services: [
         'Broadcast TV Advertising',
         'Video On-Demand Advertising: ITV, Channel 4, and others',
