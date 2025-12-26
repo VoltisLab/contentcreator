@@ -31,9 +31,8 @@ export default function Navbar() {
   const menuItems = [
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Packages', href: '#packages' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '#book' },
+    { name: 'Event Types', href: '#event-types' },
+    { name: 'FAQ', href: '#faq' },
   ]
 
   return (
