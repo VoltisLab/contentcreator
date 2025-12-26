@@ -87,55 +87,55 @@ export default function AddOns() {
   ]
 
   return (
-    <section id="add-ons" className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <section id="add-ons" className="bg-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
             Optional Add-Ons
           </h2>
-          <div className="w-24 h-1 bg-gray-300 mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-gray-300 mx-auto mb-3 sm:mb-4"></div>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
             Enhance your package with these optional services. Mix and match to create the perfect experience.
           </p>
         </div>
 
         {/* On-the-Night Add-Ons */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
-            <span className="mr-3">⚡</span>
+        <div className="mb-10 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 flex items-center">
+            <span className="mr-2 sm:mr-3 text-lg sm:text-2xl">⚡</span>
             On-the-Night Upgrades
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {onTheNight.map((addon, index) => (
               <div
                 key={index}
-                className="bg-white/60 backdrop-blur-sm rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
+                className="bg-white/60 backdrop-blur-sm rounded-lg p-4 sm:p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
-                <div className="text-4xl mb-3">{addon.icon}</div>
-                <h4 className="font-bold text-black mb-2">{addon.title}</h4>
-                <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{addon.icon}</div>
+                <h4 className="font-bold text-black mb-1.5 sm:mb-2 text-sm sm:text-base">{addon.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">{addon.description}</p>
+                <p className="text-base sm:text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Post-Event Add-Ons */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
-            <span className="mr-3">✨</span>
+        <div className="mb-10 sm:mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 flex items-center">
+            <span className="mr-2 sm:mr-3 text-lg sm:text-2xl">✨</span>
             Post-Event Add-Ons
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {postEvent.map((addon, index) => (
               <div
                 key={index}
-                className="bg-white/60 backdrop-blur-sm rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
+                className="bg-white/60 backdrop-blur-sm rounded-lg p-4 sm:p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
-                <div className="text-4xl mb-3">{addon.icon}</div>
-                <h4 className="font-bold text-black mb-2">{addon.title}</h4>
-                <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{addon.icon}</div>
+                <h4 className="font-bold text-black mb-1.5 sm:mb-2 text-sm sm:text-base">{addon.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">{addon.description}</p>
+                <p className="text-base sm:text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>
@@ -143,20 +143,20 @@ export default function AddOns() {
 
         {/* Premium Options */}
         <div>
-          <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
-            <span className="mr-3">⭐</span>
+          <h3 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6 flex items-center">
+            <span className="mr-2 sm:mr-3 text-lg sm:text-2xl">⭐</span>
             Premium Options
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {premium.map((addon, index) => (
               <div
                 key={index}
-                className="bg-white/80 backdrop-blur-md rounded-lg p-6 hover:shadow-md transition-all border border-gray-200/50"
+                className="bg-white/80 backdrop-blur-md rounded-lg p-4 sm:p-6 hover:shadow-md transition-all border border-gray-200/50"
               >
-                <div className="text-4xl mb-3">{addon.icon}</div>
-                <h4 className="font-bold text-black mb-2">{addon.title}</h4>
-                <p className="text-sm text-gray-600 mb-3">{addon.description}</p>
-                <p className="text-lg font-semibold text-gray-800">{addon.price}</p>
+                <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{addon.icon}</div>
+                <h4 className="font-bold text-black mb-1.5 sm:mb-2 text-sm sm:text-base">{addon.title}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3">{addon.description}</p>
+                <p className="text-base sm:text-lg font-semibold text-gray-800">{addon.price}</p>
               </div>
             ))}
           </div>

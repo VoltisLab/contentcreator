@@ -22,14 +22,14 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 relative">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent-orange to-transparent"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <div>
-            <h3 className="text-white font-bold mb-4 flex items-center">
+            <h3 className="text-white font-bold mb-3 sm:mb-4 flex items-center text-sm sm:text-base">
               Quick Links
-              <span className="ml-2 w-8 h-0.5 bg-accent-orange"></span>
+              <span className="ml-2 w-6 sm:w-8 h-0.5 bg-accent-orange"></span>
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href} className="hover:text-accent-orange transition-colors">
@@ -41,11 +41,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-bold mb-4 flex items-center">
+            <h3 className="text-white font-bold mb-3 sm:mb-4 flex items-center text-sm sm:text-base">
               Event Types
-              <span className="ml-2 w-8 h-0.5 bg-accent-blue"></span>
+              <span className="ml-2 w-6 sm:w-8 h-0.5 bg-accent-blue"></span>
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               {eventTypes.map((type, index) => (
                 <li key={index}>
                   <Link href="#event-types" className="hover:text-accent-blue transition-colors">
@@ -57,11 +57,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-bold mb-4 flex items-center">
+            <h3 className="text-white font-bold mb-3 sm:mb-4 flex items-center text-sm sm:text-base">
               Services
-              <span className="ml-2 w-8 h-0.5 bg-accent-green"></span>
+              <span className="ml-2 w-6 sm:w-8 h-0.5 bg-accent-green"></span>
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               <li><Link href="#packages" className="hover:text-accent-green transition-colors">Starter Package</Link></li>
               <li><Link href="#packages" className="hover:text-accent-green transition-colors">Standard Package</Link></li>
               <li><Link href="#packages" className="hover:text-accent-green transition-colors">Premium Package</Link></li>
@@ -71,11 +71,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-bold mb-4 flex items-center">
+            <h3 className="text-white font-bold mb-3 sm:mb-4 flex items-center text-sm sm:text-base">
               Contact
-              <span className="ml-2 w-8 h-0.5 bg-accent-yellow"></span>
+              <span className="ml-2 w-6 sm:w-8 h-0.5 bg-accent-yellow"></span>
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
               <li><Link href="#book" className="hover:text-accent-yellow transition-colors">Book Your Event</Link></li>
               <li><Link href="/about" className="hover:text-accent-yellow transition-colors">About Us</Link></li>
               <li><a href="mailto:hello@contentcreator.com" className="hover:text-accent-yellow transition-colors">hello@contentcreator.com</a></li>
@@ -84,14 +84,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="mb-2">
-            <strong className="text-white">Content Creator</strong>
+        <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center">
+          <p className="mb-1.5 sm:mb-2">
+            <strong className="text-white text-sm sm:text-base">Content Creator</strong>
           </p>
-          <p className="text-gray-500 text-sm mb-2">
+          <p className="text-gray-500 text-xs sm:text-sm mb-1.5 sm:mb-2">
             Professional event content, minus the stress.
           </p>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-xs sm:text-sm">
             Copyright © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>

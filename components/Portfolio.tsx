@@ -191,25 +191,25 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === selectedCategory)
 
   return (
-    <section id="portfolio" className="bg-gray-50 py-20 px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="bg-gray-50 py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 sm:mb-4">
             Our Portfolio
           </h2>
-          <div className="w-24 h-1 bg-gray-300 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-16 sm:w-24 h-1 bg-gray-300 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-2">
             Real events. Real moments. See the quality of content we deliver.
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-2">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+              className={`px-4 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm font-semibold transition-all ${
                 selectedCategory === category.id
                   ? 'bg-white/80 backdrop-blur-md text-gray-900 border border-gray-200 shadow-sm'
                   : 'bg-white/50 backdrop-blur-sm text-gray-700 border border-gray-200/50 hover:bg-white/70'
@@ -221,7 +221,7 @@ export default function Portfolio() {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4">
           {filteredItems.map((item) => (
             <div
               key={item.id}
@@ -243,10 +243,10 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <a
             href="#book"
-            className="inline-block px-8 py-4 bg-white/80 backdrop-blur-md text-gray-900 font-semibold rounded-md hover:bg-white transition-all transform hover:scale-105 shadow-sm border border-gray-200"
+            className="inline-block px-6 py-3 sm:px-8 sm:py-4 bg-white/80 backdrop-blur-md text-gray-900 font-semibold rounded-md hover:bg-white transition-all transform hover:scale-105 shadow-sm border border-gray-200 text-sm sm:text-base"
           >
             Book Your Event
           </a>
